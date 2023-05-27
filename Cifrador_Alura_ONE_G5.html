@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cifrador Challenge</title>
+  <!-- Importar Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-**********************" crossorigin="anonymous" />
+
+
+  <script src="https://kit.fontawesome.com/efd60a3361.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <!-- Marca y botón para collapsar el menú en dispositivos móviles -->
+      <!-- <a class="navbar-brand" href="#">Mi Sitio</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Contenido de la barra de navegación -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Cifrador</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<style type="text/css">
+  .card 
+  {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+
+
+</style>
+  <!-- Contenido del modulo acceso a usuarios -->
+  <div class="content-wrapper pt-4">
+
+    <!-- Encabezado -->
+    <div class="content-header">
+
+      <div class="container">
+
+        <div class="row mb-2">
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Cuerpo -->
+    <section class="content">
+
+      <div class="col-md-12" id="conceptos">
+        <div class="container">
+
+         
+           <div class="card">
+              <div class="card-header bg-info text-center"><strong>Información</strong></div>
+              <div class="card-body">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Rogelio Maximiliano Nuñez Sanchez</a>
+                    <a href="#" class="list-group-item list-group-item-action">G5 - ONE</a>
+                    <a href="#" class="list-group-item list-group-item-action">Proyecto Cifrador (Encriptador)</a>
+                    <li  class="list-group-item list-group-item-action">Contacto : <a href="https://www.linkedin.com/in/rogelio-maximiliano-nu%C3%B1ez-sanchez-b4b93468/"><i class="bi bi-linkedin"></i></a> <a href="https://github.com/RmaxCJ"><i class="bi bi-github"></i></a> <a href="https://maxanotherways.com/ES/"><i class="bi bi-globe2"></i></a> </li>
+                    <img src="assets/aluraoracle.jpg" width="25%" >
+                  </div>
+              </div>
+            </div>
+
+
+          <br>
+          <div class="card">
+             <div class="card-header bg-warning text-center"><strong>Cifrador</strong></div>
+
+            <div class="card-body mt-4 row d-flex flex-wrap">
+               <!--  <div class="box mb-4">
+                    <div class="box-header with-border">
+                      <button class="btn btn-secondary" id="abrirModalAgregarUsuario">Agregar usuario <i class="fas fa-user-plus"></i></button>
+                    </div>
+                </div> -->
+
+              
+              <div class="col-md-4">
+                <div class="card">
+                  <img class="card-img-top" src="assets/cipher2.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Cifrar</h5>
+                    <p class="card-text">En esta sección se va a <b>cifrar</b> el mensaje.</p>
+                    <textarea class="form-control" id="textareaCifrar"></textarea>
+                    <br>
+                    <button type="button" class="bi bi-clipboard" onclick="copiarTexto('textareaCifrar');"></button>
+                    <button type="button" class="btn btn-primary" onclick="cifrar()">Cifrar</button>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <img class="card-img-top" src="assets/cipher4.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Descifrar</h5>
+                    <p class="card-text">En esta sección se va a <b>descifrar</b> el mensaje.</p>
+
+                     <textarea class="form-control" id="textareaDescifrar" ></textarea>
+                      <br>
+                      <button type="button" class="bi bi-clipboard" onclick="copiarTexto('textareaDescifrar');"></button>
+
+                    <button type="button" class="btn btn-success" onclick="descifrar()">Descifrar</button>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <img class="card-img-top" src="assets/cipher.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Resultado</h5>
+                    <p class="card-text">En esta sección se va a mostrat el <b>resultado</b>.</p>
+
+                     <textarea class="form-control" id="textareaResultado" readonly></textarea>
+                    <br>
+                    <button type="button" class="bi bi-clipboard" onclick="copiarTexto('textareaResultado');"></button>
+
+                    <button type="button" class="btn btn-warning" onclick="limpiar()">Limpiar</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- /div card -->
+        </div><!-- /div container -->
+      </div>
+    </section>
+  </div>
+
+
+  <!-- Importar Bootstrap JS y dependencias necesarias -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function cifrar()
+{
+
+  var cifrar = document.getElementById("textareaCifrar");
+  var texto = cifrar.value;
+  var validacion = /^[a-z ]+$/.test(texto);
+
+  console.log(validacion);
+  if (validacion==false) 
+  {
+    alert("Se escribieron letras mayusculas o caracteres especiales, procedo a modificar la cadena. ");
+let cadenaSinAcentos = texto.replace(/[áéíóú]/gi, function(match) {
+  switch(match.toLowerCase()) 
+  {
+        case "á":
+          return "a";
+        case "é":
+          return "e";
+        case "í":
+          return "i";
+        case "ó":
+          return "o";
+        case "ú":
+          return "u";
+      }
+  });
+
+/*alert(cadenaSinAcentos); // "Hola Mundo!
+*/    var textoMinusculas = cadenaSinAcentos.toLowerCase(); 
+/*alert(textoMinusculas);*/
+    var cadenaFinal = textoMinusculas.replace(/[^a-z ]/g,"");
+alert(cadenaFinal);
+ 
+  }
+  else
+  {
+      var cadenaFinal = texto;
+  }
+
+  var textoEncriptado = cadenaFinal.replace(/e/g, "enter")
+                             .replace(/i/g, "imes")
+                             .replace(/a/g, "ai")
+                             .replace(/o/g, "ober")
+                             .replace(/u/g, "ufat");
+  textareaResultado.value = textoEncriptado;
+}
+
+function descifrar()
+{
+
+
+  var descifrar = document.getElementById("textareaDescifrar");
+  var texto2 = descifrar.value;
+  var validacion = /^[a-z ]+$/.test(texto2);
+
+  console.log(validacion);
+  if (validacion==false) 
+  {
+    alert("Se escribieron letras mayusculas o caracteres especiales, procedo a modificar la cadena. ");
+let cadenaSinAcentos = texto2.replace(/[áéíóú]/gi, function(match) {
+  switch(match.toLowerCase()) 
+  {
+        case "á":
+          return "a";
+        case "é":
+          return "e";
+        case "í":
+          return "i";
+        case "ó":
+          return "o";
+        case "ú":
+          return "u";
+      }
+  });
+
+/*alert(cadenaSinAcentos); // "Hola Mundo!
+*/    var textoMinusculas = cadenaSinAcentos.toLowerCase(); 
+/*alert(textoMinusculas);
+*/    var cadenaFinal = textoMinusculas.replace(/[^a-z ]/g,"");
+alert(cadenaFinal);
+ 
+  }
+  else
+  {
+      var cadenaFinal = texto2;
+  }
+
+
+
+
+  var texto2Desencriptado = cadenaFinal.replace(/ai/g,"a")
+                               .replace(/enter/g,"e")
+                               .replace(/imes/g,"i")
+                               .replace(/ober/g,"o")
+                               .replace(/ufat/g,"u");
+  textareaResultado.value = texto2Desencriptado;
+}
+function limpiar()
+{
+  textareaDescifrar.value="";
+  textareaCifrar.value="";  
+  textareaResultado.value="";
+}
+
+function copiarTexto(textareaId) 
+{
+  var textarea = document.getElementById(textareaId);
+  textarea.select();
+  document.execCommand("copy");
+  alert("Texto copiado: " + textarea.value);
+}
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
